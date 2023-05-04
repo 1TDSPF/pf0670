@@ -121,11 +121,22 @@
 // });
 
 //convertendo HTMLCollection em Arrays
-const imgElements = document.getElementsByTagName("img");
-console.log(imgElements);
-const imgElementsArray = [...imgElements];
-imgElementsArray.forEach((img)=>{
-    img.setAttribute("width","3%");
+// const imgElements = document.getElementsByTagName("img");
+// console.log(imgElements);
+// const imgElementsArray = [...imgElements];
+// imgElementsArray.forEach((img)=>{
+//     img.setAttribute("width","3%");
+// });
+
+//Recupere uma colections de elementos do tipo ( a ).
+// Identifique aqueles que são pertencentes somente ao cabeçalho e adicione o atributo style com a propriedade background-color:#ff0000;
+//Tire um print do código e da página alterada envie no chat!
+
+const aElements = [...document.getElementsByTagName("a")];
+
+aElements.forEach((a)=>{
+    let textoDoA = a.textContent;
+    if(textoDoA == "Home" || textoDoA == "Info" || textoDoA == "Item-3"){
+        a.setAttribute("style","background-color:#ff0000;")
+    }
 });
-
-
